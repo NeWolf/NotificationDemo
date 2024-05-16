@@ -1,0 +1,7 @@
+<resources>
+    <string name="basic_notification">基本的通知</string>
+    <string name="expandable_notification">可展开的通知</string>
+    <string name="call_style_notification">电话样式的通知</string>
+    <string name="time_sensitive_notification">具有时效性的通知</string>
+    <string name="custom_notification">自定义通知</string>
+</resources>

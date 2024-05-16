@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name" translatable="false">NotificationDemo</string>
+    <string name="basic_notification">Basic notification</string>
+    <string name="expandable_notification">Expandable notification</string>
+    <string name="call_style_notification">Call style notification</string>
+    <string name="time_sensitive_notification">Time-sensitive notification</string>
+    <string name="custom_notification">Custom notification</string>
+    <string name="request_post_permission_title">Notes</string>
+    <string name="request_post_permission_rationale">Send Notification Need POST_NOTIFICATION permisson</string>
+    <string name="request_post_permission_positive">Setting</string>
+    <string name="request_post_permission_negative">Cancel</string>
+    <string name="main_notification_id">main notification ID</string>
+    <string name="main_notification_name">main notification name</string>
+    <string name="main_notification_description">Main notification description</string>
+    <string name="basic_notification_title">Basic notification title</string>
+    <string name="basic_notification_content_text">Basic notification content text</string>
+    <string name="send_success">Send success</string>
+    <string name="basic_add_action_buttons">Add action buttons</string>
+    <string name="basic_direct_reply_msg">Add a direct reply action</string>
+    <string name="basic_progress_bar_a">Add a progress bar,style A</string>
+    <string name="basic_progress_bar_b">Add a progress bar,style B</string>
+    <string name="basic_add_system_wide_category">Set a system-wide category</string>
+    <string name="basic_urgent_msg">Show an urgent message</string>
+    <string name="basic_lock_screen_visibility">Set lock screen visibility</string>
+    <string name="basic_update">Update a notification</string>
+    <string name="basic_remove">Remove a notification</string>
+    <string name="waring">Waring！！！</string>
+</resources>

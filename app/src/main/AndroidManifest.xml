@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+
+    <application
+        android:name=".app.App"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/tj_809_square"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/tj809"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.NotificationDemo"
+        tools:targetApi="31" >
+        <service
+            android:name=".service.NotificationListenerService"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
+
+            <!-- 必要的绑定权限 -->
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" /> <!-- 必要的action -->
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".receiver.NotificationReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BasicNotificationActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".FullScreenActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:showOnLockScreen="true" />
+        <activity
+            android:name=".LockScreenActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:showOnLockScreen="true" />
+    </application>
+
+</manifest>
